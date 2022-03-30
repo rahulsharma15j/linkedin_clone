@@ -67,6 +67,24 @@ const Main = (props) => {
               <a>2 comments</a>
             </li>
           </SocialCounts>
+          <SocialActions>
+            <button>
+              <img src="/images/like-icon.svg" alt="" />
+              <span>Like</span>
+            </button>
+            <button>
+              <img src="/images/comment-icon.svg" alt="" />
+              <span>Comment</span>
+            </button>
+            <button>
+              <img src="/images/share-icon.svg" alt="" />
+              <span>Share</span>
+            </button>
+            <button>
+              <img src="/images/send-icon.svg" alt="" />
+              <span>Send</span>
+            </button>
+          </SocialActions>
         </Article>
       </div>
     </Container>
@@ -232,6 +250,38 @@ const SocialCounts = styled.ul`
   padding: 8px 0;
   border-bottom: 1px solid #e9e5df;
   list-style: none;
+  li {
+    margin-right: 5px;
+    font-size: 12px;
+    button {
+      display: flex;
+    }
+  }
+`;
+
+const SocialActions = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  min-height: 40px;
+  padding: 4px 8px;
+  button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px;
+    color: #0a66c2;
+    img {
+      filter: invert(23%) sepia(54%) saturate(7283%) hue-rotate(200deg)
+        brightness(92%) contrast(92%);
+    }
+
+    @media (min-width: 768px) {
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
 `;
 
 export default Main;
