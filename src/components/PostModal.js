@@ -1,9 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
+import ReactPlayer from "react-player";
 
 const PostModal = (props) => {
   const [editorText, setEditorText] = useState("");
   const [shareImage, setShareImage] = useState("");
+  const [videoLink, setVideoLink] = useState("");
 
   const handleChange = (e) => {
     const image = e.target.files[0];
